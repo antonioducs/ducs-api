@@ -17,7 +17,7 @@ describe('TestingUseCase Unit Tests', () => {
     };
   });
 
-  test('should be able sum number with success', () => {
+  test('should be able sum numbers with success', () => {
     const result = useCase.execute(data);
 
     expect(result).toEqual(data.numberA + data.numberB);
