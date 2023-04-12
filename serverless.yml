@@ -1,0 +1,25 @@
+service: ducs-api
+frameworkVersion: '3'
+
+useDotenv: true
+
+provider:
+  name: aws
+  runtime: nodejs18.x
+  region: 'us-east-2'
+  environment:
+    STAGE: $env:STAGE}
+
+
+plugins:
+  - serverless-plugin-typescript
+  - serverless-offline
+  - serverless-dotenv-plugin
+
+functions:
+  api:
+    handler: src/main/AWSApiGateway/routes.testingRoute
+    events:
+      - http:
+          path: /testing
+          method: get

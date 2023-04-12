@@ -1,0 +1,32 @@
+{
+  "name": "ducs-api",
+  "version": "1.0.0",
+  "description": "API for management contents",
+  "main": "index.js",
+  "scripts": {
+    "start:dev": "sls offline -s dev",
+    "test:unit": "vitest --watch",
+    "test:integration": "vitest --watch --cofig vitest.integration.config.js",
+    "test:ci": "vitest run --coverage",
+    "test:staged": "vitest run"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@faker-js/faker": "^7.6.0",
+    "@typescript-eslint/eslint-plugin": "^5.58.0",
+    "@typescript-eslint/parser": "^5.58.0",
+    "@vitest/coverage-c8": "^0.30.1",
+    "eslint": "^8.38.0",
+    "eslint-config-prettier": "^8.8.0",
+    "serverless": "^3.30.1",
+    "serverless-dotenv-plugin": "^6.0.0",
+    "serverless-offline": "^12.0.4",
+    "serverless-plugin-typescript": "^2.1.4",
+    "typescript": "^5.0.4",
+    "vitest": "^0.30.1"
+  },
+  "engine": {
+    "node": ">=18"
+  }
+}
